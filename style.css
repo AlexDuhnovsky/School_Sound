@@ -214,6 +214,7 @@ header {
   bottom: 0;
   right: 0;
   display: flex;
+  width: 50%;
   /* margin: 180px -12px 0; */
   flex: 0 0 50%;
 }
