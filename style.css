@@ -13,12 +13,10 @@
   --main-background-color: #FFFFFF;
   --button-background-color: #96BB7C;
   --devider-background-color: #E74040;
+  --header-background-color: #FFF2F3;
 }
 
-body {
-  max-width: 1440px;
-  /* overflow: hidden; */
-}
+
 
 /* .wrapper {
   max-width: 1200px;
@@ -41,7 +39,6 @@ header {
 .main__menu {
   display: flex;
   align-items: center;
-  max-width: 1200px;
   height: 91px;
   margin: 0 auto;
 }
@@ -54,8 +51,6 @@ header {
 
 .header__navigation {
   position: relative;
-
-  /* margin-left: 41px; */
   margin-right: auto;
   display: flex;
   column-gap: 21px;
@@ -136,6 +131,25 @@ header {
   font-weight: 600;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FFF2F3;
+  border-radius: 50%;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0, 3s ease-in-out;
+  transition: all 0, 3s ease-in-out;
+  background-color: var(--button-background-color);
+}
+
 /* ------------------------------------------------------------------------ */
 
 
@@ -147,10 +161,10 @@ header {
 
 .opportunities__wrapper {
   padding: 0 15px;
-  max-width: 1200px;
   flex: 0 1 100%;
   margin: 0 auto;
   height: 682px;
+  /* height: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,7 +177,7 @@ header {
   flex-direction: column;
   flex: 0 1 50%;
   max-width: 573px;
-  /* padding-left: 132px; */
+  padding-left: 132px;
 }
 
 .h5 {
@@ -213,10 +227,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
-  display: flex;
-  width: 50%;
-  /* margin: 180px -12px 0; */
-  flex: 0 0 50%;
+  /* width: 50%; */
 }
 
 .opportunities__img-settings {
@@ -228,32 +239,33 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   height: 671px;
-  max-width: 1200px;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
-.packages__text-part {
+.packages__text-part .text-part {
   display: flex;
   flex-direction: column;
   row-gap: 35px;
-  /* justify-content: start; */
   flex: 0 1 50%;
+  max-width: 507px;
 }
 
-.packages__devider {
+.packages__devider .devider {
   width: 94px;
   height: 7px;
   background-color: var(--devider-background-color);
 }
 
-.packages__description {
+.packages__description .description {
   font-size: 14px;
   line-height: 20px;
   color: var(--second-text-color);
+  max-width: 345px;
 }
 
-.packages__button {
+.button__text-part {
   text-decoration: none;
   background-color: #fff;
   display: flex;
@@ -262,7 +274,7 @@ header {
   line-height: 24px;
 }
 
-.packages__button::after {
+.button__text-part::after {
   content: url(img/packages__arrow-next.png);
   margin-left: 10px;
   display: flex;
